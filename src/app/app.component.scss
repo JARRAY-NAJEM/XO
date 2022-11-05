@@ -1,0 +1,152 @@
+/* Created by Basel Al_hajeri(MBH) */
+* {
+  transition: 1s;
+  color: #fff;
+  font-family: serif;
+  font-weight: 100;
+width: 50%;
+  padding: 0;
+  user-select: none;
+}
+.content{
+  text-align: center;
+
+}
+th {
+ height: 21vh;
+ width: 33%;
+ font-size: 12vh;
+ border: 3.5px solid rgb(0, 0, 0);
+ border-radius: 5px;
+}
+
+
+.st {
+  border-top: none;
+  border-left: none;
+  background-color:#1e1d25;
+}
+.nd {
+  border-top: none;
+  background-color:#1e1d25;
+
+}
+.th {
+  border-top: none;
+  background-color:#1e1d25;
+  border-right: none;
+ }
+.fo {
+  background-color:#1e1d25;
+  border-left: none;
+ }
+ .fi {
+    background-color:#23222c;
+ }
+.se {
+  background-color:#1e1d25;
+  border-right: none;
+ }
+.sev {
+  border-bottom: none;
+  background-color:#1e1d25;
+  border-left: none;
+ }
+.ei {
+  background-color:#1e1d25;
+  border-bottom: none;
+ }
+.ni {
+  border-bottom: none;
+  background-color:#1e1d25;
+  border-right: none;
+ }
+
+table {
+ z-index: -2;
+
+
+}
+td {
+ text-align: center;
+ font-size: 50px;
+ width: 50%;
+  font-family: cursive;
+}
+
+@keyframes win {
+ 0%{
+     color: #ff0;
+     box-shadow:inset 0 0 15px #fff, 0 0 6px #fff;
+     text-shadow: 0 0 20px #fff;
+ }
+ 50%{
+     color: lightblue;
+     box-shadow: 0 0 0 #fff;
+ }
+ 100%{
+     color: #fff;
+     box-shadow: inset 0 0 15px #fff, 0 0 6px #fff;
+     text-shadow: 0 0 2px #fff;
+ }
+}
+q {
+ quotes: '“' '”';
+ font-size: xx-large;
+}
+b:not(.b) {
+ font-size: xx-large;
+ animation: b 2s infinite;
+}
+@keyframes b{
+ from{
+     color: rgb(207, 33, 33);
+ }
+ to{
+     color: rgb(36, 24, 207);
+ }
+}
+dialog {
+ position: absolute;
+ top: -400px;
+ font-size: 25px;
+ text-align: center;
+
+ border:    2.5px  solid #ff0;
+height: 200px;
+ border-radius: 25px;
+ filter: drop-shadow(0 0 2px rgb(0, 255, 13));
+ opacity: .7;
+}
+.by{
+font-size: large;font-family: monospace;
+}
+
+@media only screen and (max-width: 600px) {
+
+  * {
+    transition: 1s;
+    color: #fff;
+    font-family: serif;
+    font-weight: 100;
+  width: 100%;
+    padding: 0;
+    user-select: none;
+  }
+  dialog {
+    position: absolute;
+    top: -400px;
+    font-size: 25px;
+    text-align: center;
+padding: 25px 50px;
+    border: 3.5px solid #ff0;
+   width: 75%;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 2px rgb(9, 189, 18));
+    opacity: .7;
+
+   }
+   .click{
+    font-size: large;
+   }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <meta charset="utf-8">
+  <title>TicTacToe</title>
+  <base href="/TicTacToe/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/6352/6352655.png">
+  <style type="text/css">@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCFPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCMPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCHPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCGPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrcVIT9d0c8.woff) format('woff');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+<style>html,body{background-color:#13121a;margin:0;padding:0}</style><link rel="stylesheet" href="styles.ac851999c9c443e6.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.ac851999c9c443e6.css"></noscript></head>
+<body>
+  <app-root></app-root>
+<script>
+  /*
+ * Created by Basel Al_hajeri('MBH')
+ */
+var x=0,o=0;
+onclick=()=>{
+    var th= document.getElementsByTagName('th'), sp = document.getElementsByTagName('span'),dia= document.querySelector('dialog');
+    var q=document.getElementById('q'),p= document.querySelector('p');
+
+    const sh=()=>{
+        th = document.getElementsByTagName('th');
+        for(let i in th){
+            try{
+                th[i].innerHTML ='';
+                th[i].setAttribute('id','');
+                dia.style.top='-400px';
+                y=1;
+            } catch(x){}
+        }
+    }
+    if(th[0].innerHTML==th[1].innerHTML&&th[0].innerHTML==th[2].innerHTML&&th[0].innerHTML!='') {
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[0].innerHTML == 'X') {
+            dia.style.top=='150px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        } else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=0; i<3; i++)
+        th[i].setAttribute('id','a')
+    } else if(th[3].innerHTML==th[4].innerHTML&&th[3].innerHTML==th[5].innerHTML&&th[3].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[3].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+                        q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=3; i<6; i++)
+        th[i].setAttribute('id','a')
+    } else if(th[6].innerHTML==th[7].innerHTML&&th[6].innerHTML==th[8].innerHTML&&th[6].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[6].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+                q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=6; i<9; i++)
+        th[i].setAttribute('id','a')
+    } else if(th[0].innerHTML==th[3].innerHTML&&th[0].innerHTML==th[6].innerHTML&&th[0].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[0].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=0; i<8; i+=3)
+        th[i].setAttribute('id','a')
+    } else if(th[1].innerHTML==th[4].innerHTML&&th[1].innerHTML==th[7].innerHTML&&th[1].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[1].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=1; i<8; i+=3)
+        th[i].setAttribute('id','a')
+    } else if(th[2].innerHTML==th[5].innerHTML&&th[2].innerHTML==th[8].innerHTML&&th[2].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[2].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=2; i<9; i+=3)
+        th[i].setAttribute('id','a')
+    } else if(th[0].innerHTML==th[4].innerHTML&&th[0].innerHTML==th[8].innerHTML&&th[0].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[0].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=0; i<9; i+=4)
+        th[i].setAttribute('id','a')
+    } else if(th[2].innerHTML==th[4].innerHTML&&th[2].innerHTML==th[6].innerHTML&&th[2].innerHTML!=''){
+        q.style.display='block';
+        p.innerHTML='The winner is';
+        if(th[2].innerHTML == 'X') {
+            dia.style.top=='100px' ? x : x++;
+            q.innerHTML='X' ? q.innerHTML='X' : q.innerHTML='X';
+        }
+        else {
+            dia.style.top=='100px' ? o : o++;
+            q.innerHTML='O' ? q.innerHTML='O' : q.innerHTML='O';
+        }
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+        for(let i=2; i<7; i+=2)
+        th[i].setAttribute('id','a')
+    } else if(y==10) {
+        q.style.display ='none';
+        p.innerHTML ='Draw!';
+        dia.style.top='100px';
+        dia.addEventListener('click',sh)
+    }
+    sp[0].innerHTML =x;
+    sp[1].innerHTML =o;
+    //console.log(y)
+}
+let y=1;
+function fu(box){
+    b:{
+        th= document.getElementsByTagName('th');
+        box.innerHTML.length ? y : y++ ;
+        if(box.innerHTML) break b;
+            if(th[0].innerHTML==th[1].innerHTML&&th[0].innerHTML==th[2].innerHTML&&th[0].innerHTML!=''||th[3].innerHTML==th[4].innerHTML&&th[3].innerHTML==th[5].innerHTML&&th[3].innerHTML!=''||th[6].innerHTML==th[7].innerHTML&&th[6].innerHTML==th[8].innerHTML&&th[6].innerHTML!=''||th[0].innerHTML==th[3].innerHTML&&th[0].innerHTML==th[6].innerHTML&&th[0].innerHTML!=''||th[1].innerHTML==th[4].innerHTML&&th[1].innerHTML==th[7].innerHTML&&th[1].innerHTML!=''||th[2].innerHTML==th[5].innerHTML&&th[2].innerHTML==th[8].innerHTML&&th[2].innerHTML!=''||th[0].innerHTML==th[4].innerHTML&&th[0].innerHTML==th[8].innerHTML&&th[0].innerHTML!=''||th[2].innerHTML==th[4].innerHTML&&th[2].innerHTML==th[6].innerHTML&&th[2].innerHTML!='') break b;
+            var td=document.getElementsByTagName('td');
+        if(y%2===0) {
+            m='X';
+            box.style.color='#f90';
+            box.style.textShadow='0 0 5px #fc4';
+            td[1].style.color='#0ff';
+            td[1].style.textShadow='0 0 19px #00f';
+            td[1].style.fontWeight='0';
+            td[0].style.color='white';
+            td[0].style.textShadow='';
+            td[0].style.fontWeight='0';
+        } else{
+            m='O';
+            box.style.color='royalblue';
+
+            box.style.textShadow='0 0 5px lightblue';
+            td[0].style.color='#f55';
+            td[0].style.textShadow='0 0 19px #00f';
+            td[0].style.fontWeight='900';
+            td[1].style.color='white';
+            td[1].style.textShadow='';
+            td[1].style.fontWeight='100';
+        }
+        box.innerHTML=m;
+    }
+}
+</script>
+<script src="runtime.27ad57f5803459e6.js" type="module"></script><script src="polyfills.7737c70340f58d9a.js" type="module"></script><script src="main.42a002c4181fcf7e.js" type="module"></script>
+
+</body></html>
